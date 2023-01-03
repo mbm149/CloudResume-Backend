@@ -26,7 +26,7 @@ jobs:
 
     env:
       # Replace $PROJECT_ID with your project ID
-      IMAGE_NAME: gcr.io/my-project-githubaction/app
+      IMAGE_NAME: gcr.io/copper-moon-370604/app-cloudresume
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -38,9 +38,9 @@ jobs:
         uses: google-github-actions/auth@v0
         with:
           # Replace with your Workload Identity Provider Location
-          workload_identity_provider: projects/857089065468/locations/global/workloadIdentityPools/gh-pool/providers/gh-provider
+          workload_identity_provider: projects/1063045670882/locations/global/workloadIdentityPools/gh-pool/providers/gh-provider
           # Replace with your GitHub Service Account
-          service_account: github-actions-service-account@my-project-githubaction.iam.gserviceaccount.com
+          service_account: github-actions-service-account@copper-moon-370604.iam.gserviceaccount.com
 
       - name: Configure Docker
         run: gcloud auth configure-docker --quiet
@@ -64,4 +64,4 @@ jobs:
         uses: 'google-github-actions/deploy-cloudrun@v1'
         with:
           service: 'cloudresume'
-          image: 'gcr.io/my-project-githubaction/app'
+          image: 'gcr.io/copper-moon-370604/app-cloudresume'
