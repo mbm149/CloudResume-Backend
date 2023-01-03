@@ -57,11 +57,11 @@ jobs:
         with:
           image: ${{ env.IMAGE_NAME }}
           region: us-central1
-          service: app
+          service: app-cloudresume
           flags: --port=8080
     
-      - id: deploy-02
-        uses: 'google-github-actions/deploy-cloudrun@v1'
-        with:
-          service: 'cloudresume'
-          image: 'gcr.io/copper-moon-370604/app-cloudresume'
+ #     - id: deploy-02
+ #       uses: 'google-github-actions/deploy-cloudrun@v1'
+ #       with:
+ #         service: 'cloudresume'
+ #         image: 'gcr.io/copper-moon-370604/app-cloudresume'
