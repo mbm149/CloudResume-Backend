@@ -62,5 +62,6 @@ WORKLOAD_IDENTITY_PROVIDER_LOCATION=$(gcloud iam workload-identity-pools provide
    --format="value(name)")
 
 echo $WORKLOAD_IDENTITY_PROVIDER_LOCATION
-
+projects/1063045670882/locations/global/workloadIdentityPools/gh-pool/providers/gh-provider
 echo $SERVICE_ACCOUNT@$PROJECT_ID.iam.gserviceaccount.com
+github-actions-service-account@copper-moon-370604.iam.gserviceaccount.com
