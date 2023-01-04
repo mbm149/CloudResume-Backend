@@ -27,7 +27,7 @@ resource "google_api_gateway_api_config" "api_cfg" {
 
 resource "google_api_gateway_gateway" "gw" {
   provider   = google-beta
-  region     = var.region
+  region     = "us-central1"
 
   api_config   = google_api_gateway_api_config.api_cfg.id
 
