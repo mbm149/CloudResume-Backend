@@ -59,6 +59,14 @@ jobs:
           region: us-central1
           service: app-cloudresume
           flags: --port=8080
+      # init and apply Terraform for the api gateway
+      - name: Terraform Init
+        uses: hashicorp/terraform-github-actions/init@v0.4.0
+        
+      - name: Terraform Apply
+        uses: hashicorp/terraform-github-actions/apply@v0.4.0
+        with:
+           path: 'tf/tf_gateway.tf'
     
  #     - id: deploy-02
  #       uses: 'google-github-actions/deploy-cloudrun@v1'
