@@ -9,8 +9,8 @@ schemes:
 produces:
 - application/json
 x-google-backend:
-  address: https://app-cloudresume-76zuattrja-uc.a.run.app
-  jwt_audience: https://app-cloudresume-76zuattrja-uc.a.run.app
+  address: https://*******************
+  jwt_audience: https://*******************
 paths:
   /:
     get:
